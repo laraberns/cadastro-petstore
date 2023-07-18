@@ -13,3 +13,14 @@
     margin: 1em 0;
 }
 
+@media screen and (max-width: 1024px) {
+    .cadastro{
+        width: 80vw;
+        margin: 3em auto 3em auto;
+    }
+
+    .cadastro__imagem {
+        width: 50vw;
+    }
+
+}
