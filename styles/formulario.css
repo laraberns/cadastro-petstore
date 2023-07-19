@@ -81,6 +81,7 @@
     margin: 0.5em;
 }
 
+
 @media screen and (max-width: 1024px) {
     .principal {
         width: 90vw;
@@ -88,7 +89,7 @@
     }
 
     .formulario__botao {
-        padding: 1em;
+        padding: 0.5em;
         font-size: 20px;
         margin: 0.5em;
     }

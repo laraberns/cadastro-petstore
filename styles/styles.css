@@ -5,13 +5,13 @@
 @import url("cadastro.css");
 
 :root {
-    --cor-de-fundo: #EBECEE;
+    --cor-de-fundo: #FFD298;
     --branco: #FFFFFF;
-    --laranja: #EB9B00;
-    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
-    --fonte-principal: "Poppins";
-    --azul: #002F52;
-    --fonte-secundario: "Josefin Sans";
+    --laranja: #4E7F61;
+    --azul-degrade: #4E7F61;
+    --fonte-principal: 'Merriweather Sans', sans-serif;
+    --azul: #000000;
+    --fonte-secundario: 'Merriweather Sans', sans-serif;
     --preto: #000000;
     --cinza: #474646;
     --cinza-claro: #858585;
