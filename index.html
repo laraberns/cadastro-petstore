@@ -43,7 +43,9 @@
                     <a href="#" class="lista__menu__link">OUTROS PETS</a>
                 </li>
             </ul>
-            <img src="img/cropped-1639582369.jpeg" alt="logo da pet store" class="container__imagem imagem-petstore">
+            <a alt="logo da pet store" href="./index.html"> <img src="img/cropped-1639582369.jpeg"
+                    class="container__imagem imagem-petstore" alt="logo">
+            </a>
             <h1 class="container__titulo"><b class="container__titulo__negrito">Pet</b>Store</h1>
         </div>
 
@@ -97,64 +99,82 @@
         <h2 class="principal__titulo">Dados do cadastro</h2>
 
         <form class="principal__formulario" id="formulario" target="_blank"
-            onsubmit="location.replace('./finalizado.html')">
+            onsubmit="location.replace('./finalizado.html')" data-formulario>
             <h3 class="principal__subtitulo">Dados pessoais</h3>
             <div class="formulario__campo">
                 <label class="campo__etiqueta" for="nome">Nome Completo</label>
-                <input name="nome" id="nome" class="campo__escrita" required />
+                <input name="nome" id="nome" class="campo__escrita" required placeholder="Nome Sobrenome" type="text"
+                    minlength="3" />
+                <span class="mensagem-erro"></span>
             </div>
             <div class="formulario__dupla">
                 <div class="formulario__campo">
                     <label class="campo__etiqueta" for="nascimento">Nascimento</label>
                     <input name="nascimento" id="nascimento" type="date" class="campo__escrita" required />
+                    <span class="mensagem-erro"></span>
                 </div>
                 <div class="formulario__campo">
                     <label class="campo__etiqueta" for="telefone">Telefone</label>
                     <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita"
-                        required />
+                        minlength="8" required />
+                    <span class="mensagem-erro"></span>
                 </div>
             </div>
             <div class="formulario__campo">
+                <label class="campo__etiqueta" for="cpf">CPF</label>
+                <input name="cpf" id="cpf" type="text" placeholder="XXX.XXX.XXX-XX" class="campo__escrita"
+                    minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required />
+                <span class="mensagem-erro"></span>
+            </div>
+            <div class="formulario__campo">
                 <label class="campo__etiqueta" for="email">E-mail</label>
-                <input name="email" id="email" type="email" class="campo__escrita" required />
+                <input name="email" id="email" type="email" class="campo__escrita" required placeholder="xxx@xxx.com"
+                    minlength="8">
+                <span class="mensagem-erro"></span>
             </div>
 
             <h3 class="principal__subtitulo">Endereço</h3>
 
             <div class="formulario__campo">
                 <label class="campo__etiqueta" for="cep">CEP</label>
-                <input name="cep" id="cep" class="campo__escrita" required />
-                <div id="erro"></div>
+                <input name="cep" id="cep" class="campo__escrita" required placeholder="XXXXX-XXX" />
+                <span class="mensagem-erro" id="erro"></span>
             </div>
 
             <div class="formulario__campo">
                 <label class="campo__etiqueta" for="endereco">Endereço</label>
-                <input name="endereco" id="endereco" class="campo__escrita" required />
+                <input name="endereco" id="endereco" class="campo__escrita" required minlength="1" type="text" />
+                <span class="mensagem-erro"></span>
             </div>
             <div class="formulario__dupla">
                 <div class="formulario__campo">
                     <label class="campo__etiqueta" for="numero">Número</label>
-                    <input name="numero" id="numero" class="campo__escrita" required />
+                    <input name="numero" id="numero" class="campo__escrita" required minlength="1" type="text" />
+                    <span class="mensagem-erro"></span>
                 </div>
                 <div class="formulario__campo">
                     <label class="campo__etiqueta" for="complemento">Complemento</label>
-                    <input name="complemento" id="complemento" class="campo__escrita" />
+                    <input name="complemento" id="complemento" type="text" class="campo__escrita" required
+                        minlength="1" />
+                    <span class="mensagem-erro"></span>
                 </div>
             </div>
             <div class="formulario__campo">
                 <label class="campo__etiqueta" for="bairro">Bairro</label>
-                <input name="bairro" id="bairro" class="campo__escrita" required />
+                <input name="bairro" id="bairro" class="campo__escrita" required minlength="1" type="text" />
+                <span class="mensagem-erro"></span>
             </div>
             <div class="formulario__dupla">
                 <div class="formulario__campo">
                     <label class="campo__etiqueta" for="cidade">Cidade</label>
-                    <input name="cidade" id="cidade" class="campo__escrita" required />
+                    <input name="cidade" id="cidade" class="campo__escrita" required minlength="1" type="text" />
+                    <span class="mensagem-erro"></span>
                 </div>
             </div>
 
             <div class="formulario__campo">
                 <label class="campo__etiqueta" for="estado">UF</label>
-                <select id="estado" name="estado" class="campo__escrita">
+                <select id="estado" name="estado" class="campo__escrita" required>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -184,14 +204,15 @@
                     <option value="TO">Tocantins</option>
                     <option value="EX">Estrangeiro</option>
                 </select>
+                <span class="mensagem-erro"></span>
             </div>
-        
 
-        <input type="submit" value="Enviar formulário" class="formulario__botao" id="enviar">
-    </form>
+
+            <input type="submit" value="Enviar formulário" class="formulario__botao" id="enviar">
+        </form>
     </main>
 
-    
+
     <footer class="rodapé">
         <h2 class="rodapé__titulo">PetStore</h2>
         <ul class="lista-rodapé">
@@ -235,7 +256,7 @@
             </li>
         </ul>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 
 </body>
 

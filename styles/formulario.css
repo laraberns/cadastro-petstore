@@ -77,7 +77,7 @@
     color: var(--vermelho);
 }
 
-#erro{
+#erro {
     margin: 0.5em;
 }
 
@@ -92,5 +92,35 @@
         padding: 0.5em;
         font-size: 20px;
         margin: 0.5em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .principal {
+        margin: 2em auto 6em auto;
+    }
+
+    .formulario__botao {
+        padding: 1em 0.5em;
+        font-size: 15px;
+    }
+
+    .principal__titulo {
+        font-size: 20px;
+    }
+
+    .principal__subtitulo {
+        margin: 2em 0 1em 0;
+        font-size: 15px;
+    }
+
+    .formulario__campo {
+        margin: .5em 3em .5em 0;
+
+    }
+
+    .campo__etiqueta {
+        font-size: 15px;
+        margin-left: 1em;
     }
 }
